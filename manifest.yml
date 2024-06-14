@@ -1,0 +1,19 @@
+modules:
+  macro:
+    - key: macro-config-example-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: macro-config-example
+      config: true
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/2e9786bc-c4ec-4a94-a74c-c5e0f190cab5
